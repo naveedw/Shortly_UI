@@ -22,4 +22,12 @@ So that the document data is pre-fill on Experience & Skills page.
 * I partially went through the upload process and still needs to add assertions.
 * I planned to set up the classes but since it's a single feature so though about creating a main file along with utilities. The other way is to create a single class to initiate the objects and then subsequently create the methods to expose their behaviour. 
 
+## Structure
+There are two python files for automation:
+* main.py
+* utilities.py
+
+utilities have the respective functions which have been called within the main. The plan was the create the assertions after I successfully uploaded the CV. 
+
+
 

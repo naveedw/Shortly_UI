@@ -17,7 +17,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC, wait
 from selenium.common.exceptions import NoSuchElementException
-
+import os
 
 def webdriver_load():
     chrome_options = webdriver.chrome.options.Options()
@@ -90,3 +90,10 @@ def upload_CV_prefilled_enabled():
     driver.find_element(By.ID, "cv-upload-*").send_keys("D:\\Documents\\Waqas\\Resume\\Shortlyster\\Scenario1.docx")
     driver.find_element(By.CSS_SELECTOR, ".CloseIconButton-sc-19wgu2s-0").click()
 
+# this is to check if the respective directory has the CVs in place
+def check_cv(path: str):
+  path = path
+  dir = os.listdir(path)
+  files = len(dir)
+  f"the word file in the respective directory are: {files}"
+  return files
